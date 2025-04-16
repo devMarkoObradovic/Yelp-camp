@@ -6,6 +6,9 @@
                 <div class="mb-3">
                     <label class="form-label" for="title">Title</label>
                     <input class="form-control" type="text" id="title" name="campground[title]" required>
+                    <div class="invalid-feedback">
+                        Please enter campground name!
+                    </div>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
@@ -13,6 +16,9 @@
                 <div class="mb-3">
                     <label class="form-label" for="location">Location</label>
                     <input class="form-control" type="text" id="location" name="campground[location]" required>
+                    <div class="invalid-feedback">
+                        Please enter campground location!
+                    </div>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
@@ -21,8 +27,11 @@
                     <label class="form-label" for="price">Campground Price</label>
                     <div class="input-group">
                         <span class="input-group-text" id="price-label">$</span>
-                        <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
-                            aria-describedby="price-label" name="campground[price]" required>
+                        <input type="number" class="form-control" id="price" placeholder="0.00" min="0"
+                            aria-label="price" aria-describedby="price-label" name="campground[price]" required>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter price that is positive number!
                     </div>
                     <div class="valid-feedback">
                         Looks good!
@@ -33,6 +42,9 @@
                     <label class="form-label" for="description">Description</label>
                     <textarea class="form-control" type="text" id="description" name="campground[description]"
                         required></textarea>
+                    <div class="invalid-feedback">
+                        Please enter description!
+                    </div>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
